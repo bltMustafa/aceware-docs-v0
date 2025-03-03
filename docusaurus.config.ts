@@ -66,6 +66,11 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/logo.png',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'Aceware Docs',
       logo: {
@@ -79,7 +84,6 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/acewareio',
           label: 'GitHub',
@@ -91,10 +95,7 @@ const config: Config = {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Aceware,Inc.`,
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
+  
   } satisfies Preset.ThemeConfig,
 };
 

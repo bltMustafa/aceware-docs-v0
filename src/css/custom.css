@@ -1,12 +1,8 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
 
-/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #3b82f6;
+  --navbar-hover-color: #4f47e6;
+
   --ifm-color-primary-dark: #2563eb;
   --ifm-color-primary-darker: #1d4ed8;
   --ifm-color-primary-darkest: #1e40af;
@@ -18,51 +14,118 @@
   
   /* Custom colors */
   --ifm-background-color: #f8fafc;
-  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-background-color: #030712;
   --ifm-footer-background-color: #f1f5f9;
+  --ifm-navbar-height: 70px;
+  --ifm-navbar-padding-horizontal: 4rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3b82f6;
-  --ifm-color-primary-dark: #2563eb;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #bfdbfe;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #8b5cf6; /* Purple */
+  --navbar-hover-color: #4f47e6;
+
+
   
   /* Custom dark theme colors */
   --ifm-background-color: #0f172a;
   --ifm-navbar-background-color: #1e293b;
   --ifm-footer-background-color: #1e293b;
-  --ifm-menu-color-background-active: #334155;
+  --ifm-menu-color-background-active: #312311;
   --ifm-card-background-color: #334155;
 }
 
-/* Global styles */
-html[data-theme='dark'] {
-  --ifm-background-surface-color: #1e293b;
-  --ifm-toc-border-color: #334155;
-}
 
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ifm-navbar-background-color);
+  height: var(--ifm-navbar-height);
+  padding: 0 var(--ifm-navbar-padding-horizontal);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-  --ifm-footer-title-color: var(--ifm-color-primary);
+.navbar__inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Card styles */
-.card {
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+  color: white;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+.navbar__items--right {
+  justify-content: flex-end;
+}
+
+/* Navbar Linkleri */
+.navbar__link {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: none !important;
+  font-size: 14px;
+}
+
+.navbar__link:hover,
+.navbar__link:focus {
+  color: white !important;
+}
+
+
+.navbar__brand > b  {
+ color: white !important;
+}
+
+.navbar__brand > b:hover, .navbar__brand > b:focus {
+  color: white !important;
+}
+
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--navbar-hover-color), var(--navbar-hover-color));
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+[data-theme='dark'] .navbar__link::after {
+  background: linear-gradient(to right, #8b5cf6, #a78bfa);
+}
+
+
+
+
+
+
+@media (max-width: 996px) {
+  :root {
+    --ifm-navbar-padding-horizontal: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --ifm-navbar-padding-horizontal: 1rem;
+  }
+
+  .navbar__items {
+    gap: 1rem;
+  }
 }
