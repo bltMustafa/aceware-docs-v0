@@ -1,0 +1,66 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #3b82f6;
+  color: white;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.categories {
+  padding: 4rem 0;
+  background-color: #1e293b;
+  color: white;
+}
+
+.categoryCard {
+  background-color: #334155;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categoryIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.categoryLink {
+  margin-top: auto;
+  display: inline-block;
+  color: #3b82f6;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.categoryLink:hover {
+  text-decoration: underline;
+}
