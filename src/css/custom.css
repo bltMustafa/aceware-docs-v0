@@ -26,13 +26,12 @@
   --navbar-hover-color: #4f47e6;
 
 
-  
   /* Custom dark theme colors */
   --ifm-background-color: #0f172a;
-  --ifm-navbar-background-color: #1e293b;
-  --ifm-footer-background-color: #1e293b;
-  --ifm-menu-color-background-active: #312311;
-  --ifm-card-background-color: #334155;
+  --ifm-navbar-background-color: #0f172a;
+  --ifm-footer-background-color: #0f172a;
+  --ifm-menu-color-background-active: #0f172a;
+  --ifm-card-background-color: #0f172a;
 }
 
 
