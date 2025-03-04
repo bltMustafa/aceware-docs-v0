@@ -12,20 +12,16 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          Aceware Internal Documentation
-        </Heading>
+        <img 
+          src="/img/logo-transparent.png" 
+          alt="Aceware Logo" 
+          className={styles.logo}
+        />
         <p className="hero__subtitle">
           Welcome to Aceware product and technical documentation. This platform has been prepared as a comprehensive
           information and resource center for our team members.
         </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
-            Get Started →
-          </Link>
-        </div>
+       
       </div>
     </header>
   );
@@ -35,35 +31,41 @@ function DocumentationCategories() {
   return (
     <section className={styles.categories}>
       <div className="container">
-        <div className="row">
-          <div className="col col--4">
-            <div className={styles.categoryCard}>
-              <div className={styles.categoryIcon}>📚</div>
-              <Heading as="h2">Product Documentation</Heading>
-              <p>Aceware product features, solutions, and user guides</p>
-              <Link to="/docs/category/product" className={styles.categoryLink}>
-                Product Docs →
-              </Link>
+        <div className="row row--no-gutters">
+          <div className="col col--4 col--sm-6 col--xs-12">
+            <div className={styles.cardWrapper}>
+              <div className={styles.categoryCard}>
+                <div className={styles.categoryIcon}>📚</div>
+                <Heading as="h2">Product Documentation</Heading>
+                <p>Aceware product features, solutions, and user guides</p>
+                <Link to="/docs/category/product" className={styles.categoryLink}>
+                  Product Docs →
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="col col--4">
-            <div className={styles.categoryCard}>
-              <div className={styles.categoryIcon}>💻</div>
-              <Heading as="h2">Technical Documentation</Heading>
-              <p>API references, integrations, and developer resources</p>
-              <Link to="/docs/category/technical" className={styles.categoryLink}>
-                Technical Docs →
-              </Link>
+          <div className="col col--4 col--sm-6 col--xs-12">
+            <div className={styles.cardWrapper}>
+              <div className={styles.categoryCard}>
+                <div className={styles.categoryIcon}>💻</div>
+                <Heading as="h2">Technical Documentation</Heading>
+                <p>API references, integrations, and developer resources</p>
+                <Link to="/docs/category/technical" className={styles.categoryLink}>
+                  Technical Docs →
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="col col--4">
-            <div className={styles.categoryCard}>
-              <div className={styles.categoryIcon}>🌟</div>
-              <Heading as="h2">Company Culture</Heading>
-              <p>Our values, working principles, and processes</p>
-              <Link to="/docs/category/culture" className={styles.categoryLink}>
-                Culture Docs →
-              </Link>
+          <div className="col col--4 col--sm-6 col--xs-12">
+            <div className={styles.cardWrapper}>
+              <div className={styles.categoryCard}>
+                <div className={styles.categoryIcon}>🌟</div>
+                <Heading as="h2">Company Culture</Heading>
+                <p>Our values, working principles, and processes</p>
+                <Link to="/docs/category/culture" className={styles.categoryLink}>
+                  Culture Docs →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

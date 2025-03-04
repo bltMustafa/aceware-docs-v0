@@ -1,39 +1,46 @@
-
 :root {
-  --ifm-color-primary: #3b82f6;
-  --navbar-hover-color: #4f47e6;
+  --ifm-color-primary: #10b981; 
+  --navbar-hover-color: #059669;
 
-  --ifm-color-primary-dark: #2563eb;
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e40af;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #bfdbfe;
+  --ifm-color-primary-dark: #059669;
+  --ifm-color-primary-darker: #047857;
+  --ifm-color-primary-darkest: #065f46;
+  --ifm-color-primary-light: #34d399;
+  --ifm-color-primary-lighter: #6ee7b7;
+  --ifm-color-primary-lightest: #a7f3d0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
-  /* Custom colors */
-  --ifm-background-color: #f8fafc;
-  --ifm-navbar-background-color: #030712;
-  --ifm-footer-background-color: #f1f5f9;
+  --ifm-background-color: #0f172a; 
+  --ifm-navbar-background-color: #030712; 
+  --ifm-footer-background-color: #030712; 
   --ifm-navbar-height: 70px;
   --ifm-navbar-padding-horizontal: 4rem;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #8b5cf6; /* Purple */
-  --navbar-hover-color: #4f47e6;
+  --ifm-color-primary: #10b981; 
+  --navbar-hover-color: #34d399;
 
-
-  /* Custom dark theme colors */
   --ifm-background-color: #0f172a;
-  --ifm-navbar-background-color: #0f172a;
-  --ifm-footer-background-color: #0f172a;
-  --ifm-menu-color-background-active: #0f172a;
-  --ifm-card-background-color: #0f172a;
+  --ifm-navbar-background-color: #030712;
+  --ifm-footer-background-color: #030712; 
+  --ifm-menu-color-background-active: #134e4a;
+  --ifm-card-background-color: #1e293b;
 }
 
+
+body {
+  background-color: #030712;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
 
 .navbar {
   display: flex;
@@ -65,7 +72,6 @@
   justify-content: flex-end;
 }
 
-/* Navbar Linkleri */
 .navbar__link {
   color: white;
   font-weight: 500;
@@ -79,7 +85,6 @@
   color: white !important;
 }
 
-
 .navbar__brand > b  {
  color: white !important;
 }
@@ -87,7 +92,6 @@
 .navbar__brand > b:hover, .navbar__brand > b:focus {
   color: white !important;
 }
-
 
 .navbar__link::after {
   content: "";
@@ -108,11 +112,6 @@
   background: linear-gradient(to right, #8b5cf6, #a78bfa);
 }
 
-
-
-
-
-
 @media (max-width: 996px) {
   :root {
     --ifm-navbar-padding-horizontal: 2rem;
@@ -127,4 +126,123 @@
   .navbar__items {
     gap: 1rem;
   }
+
+  .row--no-gutters {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .row--no-gutters > .col {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Stack cards on extra small screens */
+  @media (max-width: 576px) {
+    .col--xs-12 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+/* Custom card styling for homepage */
+.category-card-container {
+  transition: all 0.3s ease;
+}
+
+.category-card-container:hover {
+  transform: translateY(-8px);
+}
+
+.category-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #134e4a, #065f46);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-card__header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.category-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.category-card__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.category-card__title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.category-card__description {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.category-card__link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.category-card__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+}
+
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 996px) {
+ 
+ 
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+.footer {
+  background-color: #030712;
+  color: white;
 }
