@@ -75,7 +75,6 @@ function DocumentationCategories() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title={`Aceware Documentation`}

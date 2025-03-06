@@ -246,3 +246,100 @@ body {
   background-color: #030712;
   color: white;
 }
+
+
+main {
+  background-color: #030712;
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+  background-color: #030712 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu {
+  background-color: #030712 !important;
+}
+
+.menu__link {
+  color: #d1d5db;
+}
+
+.menu__link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu__link--active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Table */
+.table-of-contents {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-of-contents__link {
+  color: #d1d5db;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #ffffff;
+}
+
+/* Pagination  */
+.pagination-nav__link {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pagination-nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination-nav__label {
+  color: #ffffff;
+}
+
+.pagination-nav__sublabel {
+  color: #d1d5db;
+}
+
+/* Code  */
+.theme-code-block {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Admonitions  */
+.alert {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+}
+
+.alert--secondary {
+  --ifm-alert-background-color: rgba(255, 255, 255, 0.05);
+  --ifm-alert-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* DocSearch */
+.DocSearch-Modal {
+  background-color: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.DocSearch-SearchBar {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.DocSearch-Input {
+  color: #ffffff;
+}
+
+.DocSearch-Hit {
+  background-color: rgba(255, 255, 255, 0.05);
+}
